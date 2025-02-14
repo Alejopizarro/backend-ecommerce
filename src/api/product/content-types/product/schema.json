@@ -66,6 +66,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "isFeatured": {
+      "type": "boolean"
     }
   }
 }
