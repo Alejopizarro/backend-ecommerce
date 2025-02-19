@@ -34,6 +34,20 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
               }))
             : [],
         },
+        category: product.category
+          ? {
+              data: {
+                id: product.category.id,
+                attributes: {
+                  categoryName: product.category.categoryName,
+                  slug: product.category.slug,
+                  createdAt: product.category.createdAt,
+                  updatedAt: product.category.updatedAt,
+                  publishedAt: product.category.publishedAt,
+                },
+              },
+            }
+          : null,
       },
     }));
 
