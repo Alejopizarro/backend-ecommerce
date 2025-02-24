@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -26,12 +26,7 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "active": {
       "type": "boolean",
@@ -43,24 +38,11 @@
     },
     "brand": {
       "type": "enumeration",
-      "enum": [
-        "Adidas",
-        "Nike",
-        "Puma",
-        "Reebok"
-      ]
+      "enum": ["Adidas", "Nike", "Puma", "Reebok"]
     },
     "size": {
       "type": "enumeration",
-      "enum": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL",
-        "XXXL"
-      ]
+      "enum": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
     },
     "category": {
       "type": "relation",
