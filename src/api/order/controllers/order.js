@@ -19,9 +19,10 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     try {
       const lineItems = await Promise.all(
         products.map(async (product) => {
-          const item = await strapi
-            .service("api::product.product")
-            .findOne(product.id);
+          const item = await strapi.entityService.findOne(
+            "api::product.product",
+            product.id
+          );
 
           if (!item) {
             throw new Error(`Producto con ID ${product.id} no encontrado`);
@@ -31,9 +32,9 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
             price_data: {
               currency: "eur",
               product_data: {
-                name: item.attributes.productName, // Acceso corregido
+                name: item.productName, // Acceso corregido
               },
-              unit_amount: Math.round(item.attributes.price * 100), // Acceso corregido
+              unit_amount: Math.round(item.price * 100), // Acceso corregido
             },
             quantity: 1,
           };

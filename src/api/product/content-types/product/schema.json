@@ -26,7 +26,12 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "active": {
       "type": "boolean",
@@ -38,11 +43,28 @@
     },
     "brand": {
       "type": "enumeration",
-      "enum": ["Adidas", "Nike", "Puma", "Reebok"]
+      "enum": [
+        "Adidas",
+        "Nike",
+        "Puma",
+        "Reebok",
+        "Campagnolo",
+        "Sergio Tacchini",
+        "Columbia",
+        "Tommy Hilfigher"
+      ]
     },
     "size": {
       "type": "enumeration",
-      "enum": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ]
     },
     "category": {
       "type": "relation",

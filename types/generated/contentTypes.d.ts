@@ -500,7 +500,18 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    brand: Schema.Attribute.Enumeration<['Adidas', 'Nike', 'Puma', 'Reebok']>;
+    brand: Schema.Attribute.Enumeration<
+      [
+        'Adidas',
+        'Nike',
+        'Puma',
+        'Reebok',
+        'Campagnolo',
+        'Sergio Tacchini',
+        'Columbia',
+        'Tommy Hilfigher',
+      ]
+    >;
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
