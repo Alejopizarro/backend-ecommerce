@@ -31,6 +31,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => {
               }))
             : [],
         },
+        category: product.category,
       },
     };
   };
