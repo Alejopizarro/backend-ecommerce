@@ -12,7 +12,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
-    const { products } = ctx.request.body;
+    const { products, shippingInfo } = ctx.request.body;
 
     console.log("Datos recibidos:", ctx.request.body); // Depuración
 
@@ -56,7 +56,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 
       await strapi
         .service("api::order.order")
-        .create({ data: { products, stripeId: session.id } });
+        .create({ data: { products, stripeId: session.id, shippingInfo } });
 
       return { stripeSession: session };
     } catch (error) {

@@ -72,6 +72,12 @@
     },
     "isFeatured": {
       "type": "boolean"
+    },
+    "isOffer": {
+      "type": "boolean"
+    },
+    "oldPrice": {
+      "type": "integer"
     }
   }
 }
